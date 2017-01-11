@@ -54,10 +54,10 @@ var common = {
                     styles: {
                         left: 0,
                         width: '70%',
-                        zindex: -1
+                        zindex: 1
                     }
                 });
-            }, 200);
+            }, 300);
         });
         //打开侧滑窗口；
         function openMenu() {
@@ -70,7 +70,7 @@ var common = {
                 menu.setStyle({
                   mask: 'rgba(0,0,0,0)'
                 }); //menu设置透明遮罩防止点击
-                menu.show('none', 0, function() {
+                menu.show(2000, 2000, function() {
                     //主窗体开始侧滑并显示遮罩
                     main.setStyle({
                         mask: 'rgba(0,0,0,0.4)',
