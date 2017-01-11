@@ -1,0 +1,63 @@
+{
+	"index.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"wei.html",
+			"js/common.js",
+			"html.html",
+			"html1.html"
+		],
+		"refer": [
+			"wei.html",
+			"ce.html",
+			"html.html",
+			"html1.html",
+			"html2.html",
+			"html3.html",
+			"html4.html"
+		]
+	},
+	"wei.html": {
+		"resources": [
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/common.js"
+		],
+		"refer": [
+			"index.html",
+			"html.html"
+		]
+	},
+	"html2.html": {
+		"resources": [
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/sub.js"
+		]
+	},
+	"html3.html": {
+		"resources": [
+			"js/sub.js",
+			"js/common.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"html1.html": {
+		"resources": [
+			"js/sub.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"html4.html": {
+		"resources": [
+			"js/sub.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	}
+}

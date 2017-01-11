@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav" id="nav">
+	    <a class="<!--mui-action-back--> mui-icon mui-icon-left-nav mui-pull-left" id="mui-pull-left"></a>
+	    <h1 class="mui-title">标题</h1>
+	</header>
+	<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" data-index="0">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" data-index="1">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">电话</span>
+			</a>
+			<a class="mui-tab-item" data-index="2">
+				<span class="mui-icon mui-icon-email"></span>
+				<span class="mui-tab-label">邮件</span>
+			</a>
+			<a class="mui-tab-item" data-index="3">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a>
+		</nav>
+	<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		
+//common.refresh(url,top,bottom); //打开子页面
+//common.Url(url, top, bottom);  //打开新页面
+//common.scroll();  //区域滚动 
+//common.pullRefresh(dom,True,fun); 	//下拉刷新
+
+			//打开侧滑菜单；
+     common.menu('#mui-pull-left',"ce.html");
+     
+     //导航切换子页面
+     common.subpages(["html1.html","html2.html","html3.html","html4.html"]);
+    </script>
+	</body>
+</html>
+
+

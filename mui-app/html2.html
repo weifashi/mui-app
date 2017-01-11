@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<!--下拉刷新容器-->
+	<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+	  <div class="mui-scroll">
+	    <!--数据列表-->
+        <div class="mui-content-padded">
+            <p>这是webview模式右滑导航示例，主页面和菜单在不同的webview中，
+                优点是支持菜单内容在多页面的复用，缺点是不支持拖动手势（跟手）；
+                当前页面为主界面，你可以在主界面放置任何内容；
+            </p>
+            <p style="padding: 5px 20px;margin-bottom: 5px;">
+                <button id="show-btn" type="button" class="mui-btn mui-btn-primary mui-btn-block" style="padding: 10px;">显示侧滑菜单</button>
+            </p>
+        </div>
+	  </div>
+	</div>
+	<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/sub.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		//下拉刷新，id容器，是否自动下拉,下拉成功回调
+		common.pullRefresh("#refreshContainer",false,function  (pullRefresh) {
+			pullRefresh();//关闭下拉刷新
+		});
+		
+		common.Url('.mui-btn',"html.html", "46px", "140px")
+		</script>
+</body>
+</html>
