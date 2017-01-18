@@ -38,7 +38,7 @@ var common = {
 	},
 	menu:function  (dom,url) {// common.menu("#id","ce.html");
 	//侧滑窗口；
-			//生成2个对象分别控制主窗口和菜单窗口；
+		//生成2个对象分别控制主窗口和菜单窗口；
         var menu = null,main = null;
         var showMenu = false;
         var isInTransition = false;
@@ -54,10 +54,10 @@ var common = {
                     styles: {
                         left: 0,
                         width: '70%',
-                        zindex: 1
+                        zindex: -99
                     }
                 });
-            }, 300);
+            }, 0);
         });
         //打开侧滑窗口；
         function openMenu() {
@@ -67,23 +67,20 @@ var common = {
             if (!showMenu) {
                 //侧滑菜单处于隐藏状态，则立即显示出来；
                 isInTransition = true;
-                menu.setStyle({
-                  mask: 'rgba(0,0,0,0)'
-                }); //menu设置透明遮罩防止点击
-                menu.show(2000, 2000, function() {
-                    //主窗体开始侧滑并显示遮罩
+                menu.show(0, 0, function() {
+                	//主窗体开始侧滑并显示遮罩
                     main.setStyle({
-                        mask: 'rgba(0,0,0,0.4)',
+                    	mask: 'rgba(0,0,0,0.4)',
                         left: '70%',
                         transition: {
-                           duration: 200
-                        }
+                       	 	duration: 100
+                    	}
                     });
                     mui.later(function() {
                         isInTransition = false;
                         menu.setStyle({
                             mask: "none",
-                            zindex: 9999
+                            zindex: -99
                         }); //移除menu的mask
                     }, 200);
                     showMenu = true;
@@ -110,7 +107,7 @@ var common = {
                 //等动画结束后，隐藏菜单webview，节省资源；
                 mui.later(function() {
                     isInTransition = false;
-                    menu.hide();
+//                  menu.hide();
                 }, 200);
             };
         };

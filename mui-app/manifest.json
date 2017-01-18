@@ -206,7 +206,8 @@
 					"ce.html",
 					"html2.html",
 					"html3.html",
-					"html4.html"
+					"html4.html",
+					null
 				],
 				"priority": 0
 			},
